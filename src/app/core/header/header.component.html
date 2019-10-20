@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="['/home']">
+        <button mat-flat-button color="primary">
+            <mat-icon aria-hidden="false" aria-label="Home Icon">home</mat-icon>
+        </button>
+    </a>
+    <a [routerLink]="['/resume']">
+        <button mat-flat-button color="primary">
+            <mat-icon aria-hidden="false" aria-label="Resume Icon">description</mat-icon>
+        </button>
+    </a>
+    <span class="toolbar-spacer"></span>
+    <span>SWB App</span>
+    <a [routerLink]="['/misc']">
+        <button mat-flat-button color="primary">
+            <mat-icon aria-hidden="false" aria-label="whatever">sentiment_dissatisfied</mat-icon>
+        </button>
+    </a>
+</mat-toolbar>

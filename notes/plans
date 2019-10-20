@@ -1,0 +1,19 @@
+pages:
+    resume
+    login page
+    home pages
+    art shit
+component:
+    prizePop
+    soundboard?
+
+
+
+
+ng generate module shared --dryRun=true
+ng generate module modules/home
+ng generate module core
+ng generate module home
+ng generate module modules/home --routing=true
+
+ng generate component modules/home/pages/home

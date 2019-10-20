@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html { 
+    height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    padding-bottom: 64px;
+    // padding-top: 64px;
+}
+@media (max-width: 599px) {
+    body {
+        // padding-bottom: 56px;
+        // padding-top: 56px;
+    }
+}
+
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
