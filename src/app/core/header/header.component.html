@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="">
     <a [routerLink]="['/home']">
         <button mat-flat-button color="primary">
             <mat-icon aria-hidden="false" aria-label="Home Icon">home</mat-icon>
@@ -7,6 +7,11 @@
     <a [routerLink]="['/resume']">
         <button mat-flat-button color="primary">
             <mat-icon aria-hidden="false" aria-label="Resume Icon">description</mat-icon>
+        </button>
+    </a>
+    <a [routerLink]="['/slideshow']">
+        <button mat-flat-button color="primary">
+            <mat-icon aria-hidden="false" aria-label="slideshow">face</mat-icon>
         </button>
     </a>
     <span class="toolbar-spacer"></span>
