@@ -9,10 +9,12 @@ import { SlideshowService } from 'src/app/services/slideshow.service';
 export class SlideshowComponent implements OnInit {
 
   constructor(private slideshow: SlideshowService) { }
-  image = {};
+  image: any = {};
   windowHeight = 50;
   windowWidth = 50;
   maxTimeLeft = 90;
+  isVideo = false;
+  videoType = '';
   timeLeft = this.maxTimeLeft;
   interval;
   ngOnInit() {
@@ -25,6 +27,17 @@ export class SlideshowComponent implements OnInit {
       console.log(data);
       if (data[0].url) {
         this.image = data[0];
+      }
+      if (this.image.url && (this.image.url.includes('.mp4') ||
+          this.image.url.includes('.webm')))  {
+        this.isVideo = true;
+        if (this.image.url.includes('.webm')) {
+          this.videoType = 'video/webm';
+        } else if (this.image.url.includes('.mp4')) {
+          this.videoType = 'video/mp4';
+        }
+      } else {
+        this.isVideo = false;
       }
     });
   }
