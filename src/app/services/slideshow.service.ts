@@ -8,7 +8,17 @@ export class SlideshowService {
 
   constructor(private http: HttpClient) { }
   getImages() {
-    return this.http.get('http://guillotine.dev:8081/image');
+    return this.http.get('https://guillotine.dev:8081/image');
+  }
+  banImage(imageId) {
+    console.log('banning:' + imageId);
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+    const body = {
+      imageId
+    };
+    return this.http.post(`https://guillotine.dev:8081/image/ban/${imageId}`, body);
   }
 
 }

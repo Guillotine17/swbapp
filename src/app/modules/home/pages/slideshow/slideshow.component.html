@@ -1,3 +1,10 @@
-<div>
-    <img *ngIf="image.url" src="{{image.url}}" alt="">
+<div class="slideshowContainer" >
+        <i  class="next-button material-icons md-48" (click)="getImage()" >
+            keyboard_arrow_right
+        </i>
+        <i style="cursor: pointer;" class="ban-button material-icons md-48" (click)="ban(image.id)">
+            report
+        </i>
+        <p style="color: greenyellow; position: absolute; top: 0px; right: 0px;">{{timeLeft}}</p>
+    <img *ngIf="image.url" src="{{image.url}}" class="slideshowImage" >
 </div>
